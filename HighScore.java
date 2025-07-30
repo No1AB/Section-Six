@@ -3,7 +3,6 @@ public class HighScore {
         
         int highScore = 0;
         
-        // Instructions for this workbook are on Learn the Part (Workbook 6.5).
         int[] randomNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         for (int i = 0; i < randomNumbers.length; i++) {
