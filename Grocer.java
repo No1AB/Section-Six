@@ -2,26 +2,22 @@ import java.util.Scanner;
 
 public class Grocer {
     public static void main(String[] args) {
-        
-        // Instructions for this workbook are on Learn the Part (Workbook 6.4).
-        
-        Scanner scan = new Scanner(System.in);        
-        
-        String[] store = {"apples", "bananas", "candy", "chocolate", "coffee", "tea"};
 
-        System.out.println("\nWelcome to Java Grocers. ");
+        System.out.println("\nWelcome to Java Grocers.");
         System.out.println("What can I help you find?");
-        String response = scan.nextLine();
+
+        Scanner scan = new Scanner(System.in);
+        String query = scan.nextLine();
+
+        String[] inventory = { "apples", "bananas", "candy", "chocolate", "coffee", "tea" };
+
         
-       for (int i = 0; i < store.length; i++)
-        if (store[i].equalsIgnoreCase(response)) {
-            System.out.println("We have that in aisle " + i);
-            break;
+        for (int i = 0; i < inventory.length; i++) {
+            if (query.equals(inventory[i])) {
+                System.out.println("\nWe have that in aisle: " + i);
+                break;
+            }
         }
-        
-        scan.close();
-        
-        // Compare your result to what's on Learn the Part.
 
     }
 }
